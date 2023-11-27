@@ -28,31 +28,26 @@
 
 <main>
     <section id="showcase">
-        <!-- Image Carousel Wrapper -->
         <div id="carousel" class="carousel">
             <div class="carousel-images">
                 <img src="image1.png" class="carousel-image" alt="Image 1">
                 <img src="image2.png" class="carousel-image" alt="Image 2">
-                <img src="image3.png" class="carousel-image" alt="Image 2">
+                <img src="image3.png" class="carousel-image" alt="Image 3">
                 <!-- Add more images as needed -->
             </div>
             <!-- Carousel Navigation Arrows -->
-            <a class="carousel-arrow carousel-arrow-left" onclick="moveSlide(-1)">&#10094;</a>
-            <a class="carousel-arrow carousel-arrow-right" onclick="moveSlide(1)">&#10095;</a>
-        </div>
+	    <button class="carousel-arrow carousel-arrow-left" onclick="moveSlide(-1)">&#10094;</button>
+	    <button class="carousel-arrow carousel-arrow-right" onclick="moveSlide(1)">&#10095;</button>
 
-        <div class="content">
-            <!-- Content remains the same -->
+            <div class="logo-overlay">
+                <img src="logo.png" alt="Restaurant Logo">
+            </div>
         </div>
     </section>
 </main>
-
+    <script src="script.js"></script>
 <footer>
     <!-- Footer content here -->
 </footer>
-
-<script src="script.js"></script>
-
 </body>
 </html>
-
