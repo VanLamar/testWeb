@@ -1,0 +1,102 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+}
+
+#logo {
+    height: 40px; /* Adjust as needed */
+}
+
+#showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+#featured-dish-wrapper {
+    position: fixed; /* Или absolute, если header не fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% от ширины viewport */
+    height: 100vh; /* 100% от высоты viewport */
+    overflow: hidden;
+    z-index: -1; /* Под текстовым содержимым */
+}
+
+#featured-dish {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обеспечивает покрытие всей области без искажений */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3); /* Начальный масштаб */
+    transition: transform 10s ease-in-out;
+}
+
+
+
+.content {
+    z-index: 10;
+    color: white;
+    width: 100%;
+}
+
+.content h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Additional styles for animations and responsiveness */
+/* ... */
