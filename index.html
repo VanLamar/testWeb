@@ -28,13 +28,20 @@
 
 <main>
     <section id="showcase">
-        <div id="featured-dish-wrapper">
-            <img src="featured-dish.jpg" id="featured-dish" alt="Featured Dish">
+        <!-- Image Carousel Wrapper -->
+        <div id="carousel" class="carousel">
+            <div class="carousel-images">
+                <img src="image1.jpg" class="carousel-image" alt="Image 1">
+                <img src="image2.jpg" class="carousel-image" alt="Image 2">
+                <!-- Add more images as needed -->
+            </div>
+            <!-- Carousel Navigation Arrows -->
+            <a class="carousel-arrow carousel-arrow-left" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="carousel-arrow carousel-arrow-right" onclick="moveSlide(1)">&#10095;</a>
         </div>
+
         <div class="content">
-            <h1><img src="logo.png"></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-            <button>VIEW OUR MENU</button>
+            <!-- Content remains the same -->
         </div>
     </section>
 </main>
@@ -47,3 +54,4 @@
 
 </body>
 </html>
+
