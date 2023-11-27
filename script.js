@@ -3,19 +3,36 @@ document.addEventListener("DOMContentLoaded", function() {
     var slides = document.querySelectorAll('.carousel-image');
     var totalSlides = slides.length;
 
+    // Function to show the current slide
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    // Initial display
+    showSlide(currentIndex);
+
+    // Function to move to the next slide
+    function moveToNextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    // Automatically move to the next slide every 20 seconds
+    setInterval(moveToNextSlide, 20000);
+
+    // Navigation function
     window.moveSlide = function(direction) {
         currentIndex += direction;
-
-        // Loop back to the first or last image if the end is reached
         if (currentIndex >= totalSlides) {
             currentIndex = 0;
         } else if (currentIndex < 0) {
             currentIndex = totalSlides - 1;
         }
-
-        var newTransformValue = -currentIndex * 100 + '%';
-        document.querySelector('.carousel-images').style.transform = 'translateX(' + newTransformValue + ')';
+        showSlide(currentIndex);
     };
-
-    // Your existing code for the featured dish image
 });
