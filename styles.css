@@ -1,4 +1,3 @@
-/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@ nav ul li a {
 }
 
 #logo {
-    height: 40px; /* Adjust as needed */
+    height: 40px; 
 }
 
 #showcase {
@@ -51,23 +50,23 @@ nav ul li a {
 }
 
 #featured-dish-wrapper {
-    position: fixed; /* Или absolute, если header не fixed */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100vw; /* 100% от ширины viewport */
-    height: 100vh; /* 100% от высоты viewport */
+    width: 100vw; 
+    height: 100vh; 
     overflow: hidden;
-    z-index: -1; /* Под текстовым содержимым */
+    z-index: -1; 
 }
 
 #featured-dish {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Обеспечивает покрытие всей области без искажений */
+    object-fit: cover; 
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1); /* Начальный масштаб */
+    transform: translate(-50%, -50%) scale(1); 
     transition: transform 10s ease-in-out;
 }
 
@@ -102,35 +101,49 @@ button {
     cursor: pointer;
 }
 
-/* Carousel Styles */
+/* Full-Screen Carousel Styles */
 .carousel {
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 0.5s ease;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: transform 1s ease;
 }
 
 .carousel-image {
     max-width: 100%;
-    display: block;
+    max-height: 100%;
+    display: none; 
     object-fit: cover;
 }
 
+.carousel-image.active {
+    display: block; 
+    animation: zoomInOut 20s linear infinite;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
 .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    padding: 10px;
-    color: white;
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-arrow-left {
