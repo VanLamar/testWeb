@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var featuredDishImg = document.getElementById('featured-dish');
-    
-    // Устанавливаем начальный масштаб как 100% (scale(1))
-    featuredDishImg.style.transform = 'translate(-50%, -50%) scale(1)';
-    
-    // Задаем анимацию увеличения масштаба до 130% (scale(1.3))
-    setTimeout(function() {
-        featuredDishImg.style.transition = 'transform 10s ease-in-out';
-        featuredDishImg.style.transform = 'translate(-50%, -50%) scale(1.3)';
-    }, 20); // Можно увеличить время задержки, если необходимо
+    var currentIndex = 0;
+    var slides = document.querySelectorAll('.carousel-image');
+    var totalSlides = slides.length;
+
+    window.moveSlide = function(direction) {
+        currentIndex += direction;
+
+        // Loop back to the first or last image if the end is reached
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = totalSlides - 1;
+        }
+
+        var newTransformValue = -currentIndex * 100 + '%';
+        document.querySelector('.carousel-images').style.transform = 'translateX(' + newTransformValue + ')';
+    };
+
+    // Your existing code for the featured dish image
 });
