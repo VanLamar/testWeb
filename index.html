@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" id="logo" alt="Restaurant Logo">
+    <nav>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#pages">PAGES</a></li>
+            <li><a href="#elements">ELEMENTS</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#shop">SHOP</a></li>
+        </ul>
+    </nav>
+    <div class="header-icons">
+        <img src="search-icon.png" alt="Search">
+        <img src="language-icon.png" alt="Language Switch">
+    </div>
+</header>
+
+<main>
+    <section id="showcase">
+        <div id="carousel" class="carousel">
+            <div class="carousel-images">
+                <img src="image1.png" class="carousel-image" alt="Image 1">
+                <img src="image2.png" class="carousel-image" alt="Image 2">
+                <img src="image3.png" class="carousel-image" alt="Image 3">
+                <img src="image4.png" class="carousel-image" alt="Image 4">
+                <!-- Add more images as needed -->
+            </div>
+            <button class="carousel-arrow carousel-arrow-left" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-arrow carousel-arrow-right" onclick="moveSlide(1)">&#10095;</button>
+<div class="logo-overlay">
+    <div class="logo-text logo-text-top">RESTAURANT</div>
+    <img src="majeur_logo_EN__FR_French.png" alt="Restaurant Logo" class="main-logo">
+    <div class="logo-text logo-text-bottom">European Excellence: The Finest in Flavor</div>
+</div>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+<footer>
+    <!-- Footer content here -->
+</footer>
+</body>
+</html>

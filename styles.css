@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-icons img {
+    height: 24px;
+    margin-left: 10px;
+}
+
+#logo {
+    height: 40px;
+}
+
+#showcase {
+    height: 100vh;
+    position: relative;
+    margin-top: 60px;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    display: block;
+    opacity: 1;
+    animation: zoom 5s ease-in-out;
+}
+
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.4); }
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+}
+
+.carousel-arrow-left {
+    left: 10px;
+}
+
+.carousel-arrow-right {
+    right: 10px;
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.main-logo {
+    max-width: 150%; /* Increase the size of the logo */
+    animation: fadeIn 2s ease-in;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.logo-text-top {
+    margin-bottom: 10px;
+}
+
+.logo-text-bottom {
+    margin-top: 10px;
+}
+
+
+.logo-overlay img {
+    max-width: 500px;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .carousel-arrow-left, .carousel-arrow-right {
+        font-size: 18px;
+    }
+    
+    .logo-overlay img {
+        max-width: 150px;
+    }
+}
