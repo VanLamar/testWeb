@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     startFirstSlideAnimation();
 
     // Automatically move to the next slide every 5 seconds
-    setInterval(moveToNextSlide, 6000);
+    setInterval(moveToNextSlide, 7000);
 
     window.moveSlide = function(direction) {
         currentIndex += direction;
