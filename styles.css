@@ -11,16 +11,30 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+    /* Other styles */
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
+    position: absolute; /* changed from fixed to absolute */
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 100;
+    background-color: transparent; /* make header background transparent */
+    z-index: 101; /* ensure the z-index is higher than that of the carousel */
+}
+
+nav ul li a {
+    color: #fff; /* change color to white for visibility */
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.7); /* Add text shadow for readability */
 }
 
 
@@ -30,11 +44,6 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 .header-icons img {
     height: 24px;
@@ -48,8 +57,9 @@ nav ul li a {
 #showcase {
     height: 100vh;
     position: relative;
-    margin-top: 60px;
+    margin-top: 0; /* Change this from 60px to 0 */
 }
+
 
 .carousel {
     position: absolute;
