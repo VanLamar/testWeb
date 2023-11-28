@@ -76,7 +76,7 @@ nav ul li a {
 .carousel-image.active {
     display: block;
     opacity: 1;
-    animation: zoom 5s ease-in-out;
+    animation: zoom 7s ease-in-out;
 }
 
 @keyframes zoom {
@@ -120,19 +120,30 @@ nav ul li a {
     filter: drop-shadow(2px 4px 6px black);
 }
 
-.logo-text {
+.logo-text-top,
+.logo-text-middle,
+.logo-text-bottom {
     color: #fff;
-    font-size: 1.5em;
+    font-family: 'Helvetica Neue', sans-serif; /* or similar font */
+    text-transform: uppercase;
+    margin: 10px 0;
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 2s ease-in;
 }
 
 .logo-text-top {
-    margin-bottom: 10px;
+    font-size: 1.2em; /* smaller size for top text */
+    letter-spacing: 0.1em;
+}
+
+.logo-text-middle {
+    font-size: 2.4em; /* larger size for middle text */
+    letter-spacing: 0.15em;
 }
 
 .logo-text-bottom {
-    margin-top: 10px;
+    font-size: 1.2em; /* smaller size for bottom text */
+    letter-spacing: 0.1em;
 }
 
 
